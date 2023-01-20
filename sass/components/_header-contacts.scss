@@ -1,0 +1,28 @@
+.contacts {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.contacts__link {
+  color: var(--secondary-text-color);
+  @include font(500, 14px, 1.14, 0.02em);
+  text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
