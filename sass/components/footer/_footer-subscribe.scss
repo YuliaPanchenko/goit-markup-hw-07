@@ -7,7 +7,7 @@
   @include font(700, null, 1.14, null);
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .subscribe__form {
@@ -21,11 +21,16 @@
   height: 50px;
 
   @include font(null, 16px, 1.25, null);
-  background-color: #2f303a;
-  color: #ffffff;
+  background-color: var(--secondary-black-background);
+  color: var(--white-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  &::placeholder {
+    @include font(400, 16px, 1.25, 0.03em);
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .subscribe__button {
@@ -40,11 +45,11 @@
   @include font(700, 16px, 1.88, 0.06em);
   cursor: pointer;
   background-color: #188ce8;
-  color: #ffffff;
+  color: var(--white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .subscribe__icon {
   margin-left: 10px;
-  fill: #ffffff;
+  fill: var(--white-color);
 }
