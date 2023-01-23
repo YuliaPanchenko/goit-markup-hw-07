@@ -450,23 +450,22 @@
         </div>
         <div class="subscribe__wrap">
           <p class="subscribe__text">Підпишіться на розсилку</p>
-          <div class="subscribe">
-            <form class="subscribe__form">
-              <input
-                type="text"
-                class="subscribe__input"
-                name="user-email"
-                placeholder="E-mail"
-                required
-              />
-            </form>
+
+          <form class="subscribe__form">
+            <input
+              type="text"
+              class="subscribe__input"
+              name="user-email"
+              placeholder="E-mail"
+              required
+            />
             <button type="submit" class="subscribe__button">
               Підписатися
               <svg class="subscribe__icon" width="24" height="24">
                 <use href="./images/icon.svg#icon-send"></use>
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
@@ -526,7 +525,7 @@
             name="user-text"
             id="user-coment"
             class="input-message"
-            placeholder=""
+            placeholder="Введіть текст"
           ></textarea>
           <input
             type="checkbox"
@@ -534,7 +533,6 @@
             id="privacy"
             value="true"
             class="modal-check visually-hidden"
-            checked
           />
           <label for="privacy" class="privacy-text">
             <span>
