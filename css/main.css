@@ -22,8 +22,7 @@
 
 .modal {
   position: absolute;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 40px;
   left: 50%;
   top: 50%;
   width: 528px;
@@ -51,7 +50,7 @@
   right: 8px;
   top: 8px;
   cursor: pointer;
-  transition-property: border;
+  transition-property: border, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -65,7 +64,6 @@
 }
 
 .modal-title {
-  margin-top: 37px;
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
@@ -75,10 +73,12 @@
 }
 
 .modal-input {
+  display: block;
   margin-bottom: 10px;
   padding-left: 32px;
   width: 448px;
   height: 40px;
+  outline: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition-property: border;
@@ -109,8 +109,15 @@
 }
 
 .input-message {
+  padding: 12px 16px;
   width: 448px;
   height: 120px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  outline: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -139,6 +146,8 @@
   line-height: 1.71;
   color: #757575;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .privacy-text span {
@@ -178,9 +187,12 @@
   line-height: 1.88;
   letter-spacing: 0.06em;
   cursor: pointer;
-  background-color: #188ce8;
+  background-color: var(--accent-blue-color);
   color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.modal-button:hover {
+  background-color: #188ce8;
 }
 
 /* .privacy-text::before {
@@ -734,7 +746,13 @@ img {
   color: #ffffff;
 }
 
+.subscribe__form {
+  display: flex;
+  gap: 12px;
+}
+
 .subscribe__input {
+  padding-left: 16px;
   width: 358px;
   height: 50px;
   font-size: 16px;
@@ -746,20 +764,12 @@ img {
   border-radius: 4px;
 }
 
-.subscribe {
-  display: flex;
-  gap: 12px;
-}
-
 .subscribe__button {
-  position: relative;
-  display: block;
-  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
   height: 50px;
-  padding-top: 10px;
-  padding-right: 62px;
-  padding-bottom: 10px;
-  padding-left: 28px;
   border: none;
   border-radius: 4px;
   font-weight: 700;
@@ -773,11 +783,8 @@ img {
 }
 
 .subscribe__icon {
+  margin-left: 10px;
   fill: #ffffff;
-  position: absolute;
-  right: 28px;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .portfolio {
