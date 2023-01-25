@@ -124,32 +124,8 @@
   border-radius: 4px;
   resize: none;
 }
-.input-message:hover {
+.input-message:hover, .input-message:focus {
   border-color: var(--accent-blue-color);
-}
-.input-message::-moz-placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  font-style: normal;
-  color: rgba(117, 117, 117, 0.5);
-}
-.input-message:-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  font-style: normal;
-  color: rgba(117, 117, 117, 0.5);
-}
-.input-message::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  font-style: normal;
-  color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-icons {
@@ -218,7 +194,7 @@
   background-color: var(--accent-blue-color);
   color: var(--white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition-property: background-color, color, box-shadow;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
